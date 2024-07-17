@@ -10,8 +10,3 @@ class Net(nn.Module):    # 定义Net类，继承nn.Module类
         self.relu = nn.ReLU()    # 定义激活函数ReLU
         self.fc2 = nn.Linear(hidden_size, num_classes)    # 定义全连接层2
 
-    def forward(self, x):    # 定义Net类的前向传播函数
-        out = self.fc1(x)    # 全连接层1的输出
-        out = self.relu(out)    # 激活函数ReLU的输出
-        out = self.fc2(out)    # 全连接层2的输出
-        return out    # 返回输出
